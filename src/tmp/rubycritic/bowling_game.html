@@ -68,7 +68,7 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">59</span><small> lines of codes</small></div>
+              <div><span class="metric">50</span><small> lines of codes</small></div>
               <div><span class="metric">7</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
@@ -98,18 +98,15 @@
     </div>
 
     <code class="prettyprint linenums lang-ruby file-code js-file-code"># frozen_string_literal: true
-
 # def bowling game
 class Bowling
     def initialize
         @rolls = []
         @score = 0
     end
-
     def roll pins
         @rolls &lt;&lt; pins
     end
-
     def score        
         roll_index = 0
         10.times do
@@ -126,30 +123,24 @@ class Bowling
         end
         @score
     end
-
     # def points(roll_index)
     #     @rolls[roll_index] = Random.rand(0..10)
     # end
-
     def strike?(roll_index)
         # points(roll_index)
         @rolls[roll_index] == 10
     end
-
     def strike_or_spare_score(roll_index)
         @rolls[roll_index] + @rolls[roll_index + 1] +  @rolls[roll_index + 2]
     end
-
     def spare?(roll_index)
         # @dif = 10 - @rolls[roll_index]
         # @rolls[roll_index + 1] = Random.rand(0..@dif)
         @rolls[roll_index] + @rolls[roll_index + 1] == 10
     end
-
     def frame_score(roll_index)
         @rolls[roll_index] + @rolls[roll_index + 1]
     end
-
     # def final_score
     #     @rolls.each do |_final_score|
     #         puts @score, &#39;/&#39;

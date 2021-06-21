@@ -68,7 +68,7 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">39</span><small> lines of codes</small></div>
+              <div><span class="metric">32</span><small> lines of codes</small></div>
               <div><span class="metric">0</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
@@ -98,40 +98,33 @@
     </div>
 
     <code class="prettyprint linenums lang-ruby file-code js-file-code">require_relative &#39;../src/bowling_game&#39;
-
 describe &#39;Bowling Game Behavior&#39; do
-    
     before do
         @game = Bowling.new
     end
-
-    it &quot;create the rotations in the game&quot; do        <ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 3 nodes</span>              <span>Locations:</span>                  <a href="bowling_game_spec.html#L9" class="js-smell-location">0</a>                  <a href="bowling_game_spec.html#L14" class="js-smell-location">1</a>                  <a href="bowling_game_spec.html#L35" class="js-smell-location">2</a>                  </div>  </li></ol>
+    it &quot;create the rotations in the game&quot; do        <ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 3 nodes</span>              <span>Locations:</span>                  <a href="bowling_game_spec.html#L6" class="js-smell-location">0</a>                  <a href="bowling_game_spec.html#L10" class="js-smell-location">1</a>                  <a href="bowling_game_spec.html#L28" class="js-smell-location">2</a>                  </div>  </li></ol>
         20.times{@game.roll 0}
         expect(@game.score).to eql 0
     end
-
-    it &quot;can do all in one score&quot; do <ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 3 nodes</span>              <span>Locations:</span>                  <a href="bowling_game_spec.html#L9" class="js-smell-location">0</a>                  <a href="bowling_game_spec.html#L14" class="js-smell-location">1</a>                  <a href="bowling_game_spec.html#L35" class="js-smell-location">2</a>                  </div>  </li></ol>
+    it &quot;can do all in one score&quot; do <ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 3 nodes</span>              <span>Locations:</span>                  <a href="bowling_game_spec.html#L6" class="js-smell-location">0</a>                  <a href="bowling_game_spec.html#L10" class="js-smell-location">1</a>                  <a href="bowling_game_spec.html#L28" class="js-smell-location">2</a>                  </div>  </li></ol>
         20.times{@game.roll 1}
         expect(@game.score).to eql 20
     end
-
-    it &quot;can do a spare&quot; do<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 2 nodes</span>              <span>Locations:</span>                  <a href="bowling_game_spec.html#L19" class="js-smell-location">0</a>                  <a href="bowling_game_spec.html#L27" class="js-smell-location">1</a>                  </div>  </li></ol>
+    it &quot;can do a spare&quot; do<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 2 nodes</span>              <span>Locations:</span>                  <a href="bowling_game_spec.html#L14" class="js-smell-location">0</a>                  <a href="bowling_game_spec.html#L21" class="js-smell-location">1</a>                  </div>  </li></ol>
         @game.roll(5)
         @game.roll(5)
         @game.roll(3)
         17.times{@game.roll 0}
         expect(@game.score).to eql 16
     end
-
-    it &quot;can do a strike&quot; do<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 2 nodes</span>              <span>Locations:</span>                  <a href="bowling_game_spec.html#L19" class="js-smell-location">0</a>                  <a href="bowling_game_spec.html#L27" class="js-smell-location">1</a>                  </div>  </li></ol>
+    it &quot;can do a strike&quot; do<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 2 nodes</span>              <span>Locations:</span>                  <a href="bowling_game_spec.html#L14" class="js-smell-location">0</a>                  <a href="bowling_game_spec.html#L21" class="js-smell-location">1</a>                  </div>  </li></ol>
         @game.roll(10)
         @game.roll(3)
         @game.roll(4)
         16.times{@game.roll 0}
         expect(@game.score).to eql 24
     end
-
-    it &quot;can do a perfect game&quot; do<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 3 nodes</span>              <span>Locations:</span>                  <a href="bowling_game_spec.html#L9" class="js-smell-location">0</a>                  <a href="bowling_game_spec.html#L14" class="js-smell-location">1</a>                  <a href="bowling_game_spec.html#L35" class="js-smell-location">2</a>                  </div>  </li></ol>
+    it &quot;can do a perfect game&quot; do<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 3 nodes</span>              <span>Locations:</span>                  <a href="bowling_game_spec.html#L6" class="js-smell-location">0</a>                  <a href="bowling_game_spec.html#L10" class="js-smell-location">1</a>                  <a href="bowling_game_spec.html#L28" class="js-smell-location">2</a>                  </div>  </li></ol>
         12.times{@game.roll(10)}
         expect(@game.score).to eql 300
     end
